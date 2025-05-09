@@ -17,9 +17,9 @@ def main():
     
     subscriber.connect("tcp://localhost:5556")
     
-    # Inicialmente, não se inscreve em nenhum tópico.
-    # Dessa forma, o assinante não receberá mensagens
-    # até que o usuário use o comando "seguir".
+    # Inicialmente, o usuario nao segue ninguem.
+    # Dessa forma, o usuario não receberá mensagens
+    # ate que o usuerio use o comando "seguir".
     
     # Thread para ouvir as mensagens que chegam
     thread = threading.Thread(target=listen_messages, args=(subscriber,))

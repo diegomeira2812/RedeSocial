@@ -1,2 +1,5 @@
 {"user": "diego", "text": "ola amigos", "timestamp": 1746757379.6269274}
 {"user": "diego", "text": "oi amigo que me seguiu", "timestamp": 1746757463.1604977}
+{"user": "diego", "text": "ola a todos", "timestamp": 1747362927.6112573}
+{"user": "diego", "text": "ola dnv", "timestamp": 1747363003.4609818}
+{"user": "giovanne", "text": "ola diego", "timestamp": 1747364211.0123782}

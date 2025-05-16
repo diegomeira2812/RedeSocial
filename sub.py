@@ -1,9 +1,9 @@
 import zmq
 import threading
 
-def listen_messages(subscriber):
+def listen_messages(sub):
     while True:
-        message = subscriber.recv_string()
+        message = sub.recv_string()
         # Extrai o nome do autor e o conteúdo da mensagem
         try:
             user, payload = message.split(":", 1)
@@ -12,17 +12,17 @@ def listen_messages(subscriber):
         print(f"\nNova publicação de {user}: {payload}")
 
 def main():
-    context = zmq.Context()
-    subscriber = context.socket(zmq.SUB)
-    
-    subscriber.connect("tcp://localhost:5556")
+    ctx = zmq.Context()
+    sub = ctx.socket(zmq.SUB)
+    sub.setsockopt_string(zmq.SUBSCRIBE, "")
+    sub.connect("tcp://localhost:5556")
     
     # Inicialmente, o usuario nao segue ninguem.
     # Dessa forma, o usuario não receberá mensagens
     # ate que o usuerio use o comando "seguir".
     
     # Thread para ouvir as mensagens que chegam
-    thread = threading.Thread(target=listen_messages, args=(subscriber,))
+    thread = threading.Thread(target=listen_messages, args=(sub,))
     thread.daemon = True
     thread.start()
     
@@ -33,7 +33,7 @@ def main():
         if command.startswith("seguir "):
             followed_user = command.split(" ", 1)[1].strip()
             # Adiciona o filtro para o usuário seguido
-            subscriber.setsockopt_string(zmq.SUBSCRIBE, f"{followed_user}:")
+            sub.setsockopt_string(zmq.SUBSCRIBE, f"{followed_user}:")
             print(f"Você agora segue {followed_user}!")
         elif command == "sair":
             break

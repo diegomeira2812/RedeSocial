@@ -4,7 +4,7 @@ import json
 def main():
     context = zmq.Context()
     socket = context.socket(zmq.ROUTER)
-    socket.bind("tcp://*:5557")
+    socket.connect("tcp://*:5557")
     
     usuarios = {}
     msg_offline = {} # armazena mensagens para usuários offline

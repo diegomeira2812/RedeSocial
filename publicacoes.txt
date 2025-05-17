@@ -1,5 +1,8 @@
-{"user": "diego", "text": "ola amigos", "timestamp": 1746757379.6269274}
-{"user": "diego", "text": "oi amigo que me seguiu", "timestamp": 1746757463.1604977}
-{"user": "diego", "text": "ola a todos", "timestamp": 1747362927.6112573}
-{"user": "diego", "text": "ola dnv", "timestamp": 1747363003.4609818}
-{"user": "giovanne", "text": "ola diego", "timestamp": 1747364211.0123782}
+
+{"user": "diego", "text": "ola", "timestamp": 1747507570.2070785}
+{"user": "diego", "text": "oi", "timestamp": 1747508806.9646323}
+{"user": "diego", "text": "oi", "timestamp": 1747508888.771878}
+{"user": "diego", "text": "oi", "timestamp": 1747508963.0576513}
+{"user": "diego", "text": "oi giovanne", "timestamp": 1747509095.8052685}
+{"user": "diego", "text": "oi dnv", "timestamp": 1747509357.355491}
+{"user": "diego", "text": "salve gigio", "timestamp": 1747509777.4535224}
